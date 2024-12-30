@@ -1,3 +1,12 @@
+{*************************************************************************}
+{  This file is part of Files And Folders.                                }
+{  Copyright (c) 1997-2025 Hellogramming                                  }
+{  https://www.hellogramming.com/                                         }
+{                                                                         }
+{  Files And Folders is free software; you can redistribute it and/or     }
+{  modify it under the terms of the MIT License.                          }
+{*************************************************************************}
+
 program FilesAndFolders;
 
 uses

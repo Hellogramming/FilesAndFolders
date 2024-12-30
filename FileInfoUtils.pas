@@ -1,13 +1,11 @@
-
-{*********************************************************************}
-{                                                                     }
-{  FileInfoUtils Delphi Unit                                          }
-{  Helper routines for working with file information (date/size, etc.)}
-{                                                                     }
-{  Copyright © 1997-2024 Hellogramming                                }
-{  https://www.hellogramming.com/                                     }
-{                                                                     }
-{*********************************************************************}
+{*************************************************************************}
+{  This file is part of Files And Folders.                                }
+{  Copyright (c) 1997-2025 Hellogramming                                  }
+{  https://www.hellogramming.com/                                         }
+{                                                                         }
+{  Files And Folders is free software; you can redistribute it and/or     }
+{  modify it under the terms of the MIT License.                          }
+{*************************************************************************}
 
 unit FileInfoUtils;
 
