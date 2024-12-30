@@ -15,7 +15,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Grids, Outline, DirOutln, StdCtrls, FileCtrl, ComCtrls, ExtCtrls, ShellAPI,
   CommCtrl, Menus, Calendar, SizeThread, Buttons, ShExDriveComboBox,
-  HelpAwareLabel, FieldsList, ImgList;
+  HelpAwareLabel, FieldsList, ImgList, System.ImageList;
 
 type
   TConfiguration = record
@@ -144,14 +144,15 @@ var
 
 implementation
 
-uses DateTime, FormAbout, FileInfoUtils;
+//uses DateTime, FormAbout, FileInfoUtils;
+uses DateTime, FormAbout, Utils;
 
 {$R *.DFM}
 
 var
   SortAscending   : Boolean;
 
-function FormatIntWithComma(N : Integer) : String;
+function FormatIntWithComma(N : Int64) : String;
 var
   R : Real;
 begin
@@ -390,8 +391,8 @@ begin
     FieldValues[2] := FormatIntWithComma(lpBytesPerSector*lpSectorsPerCluster);
     FieldValues[3] := FormatIntWithComma(lpTotalNumberOfClusters);
     FieldValues[4] := FormatIntWithComma(lpNumberOfFreeClusters);
-    FieldValues[5] := FormatIntWithComma(lpBytesPerSector * lpSectorsPerCluster * lpTotalNumberOfClusters);
-    FieldValues[6] := FormatIntWithComma(lpBytesPerSector * lpSectorsPerCluster * lpNumberOfFreeClusters);
+    FieldValues[5] := FormatIntWithComma(Int64(lpBytesPerSector) * lpSectorsPerCluster * lpTotalNumberOfClusters);
+    FieldValues[6] := FormatIntWithComma(Int64(lpBytesPerSector) * lpSectorsPerCluster * lpNumberOfFreeClusters);
     if ItemIndex < 0 then ItemIndex := 0;
   end;
 end;

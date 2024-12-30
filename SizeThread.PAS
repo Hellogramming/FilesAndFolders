@@ -9,7 +9,7 @@ const
   WM_UPDATEDIRSIZE = WM_USER + 1;
 
 var
-  FolderSize, ActualFolderSize, FileNo, FolderNo : Integer;
+  FolderSize, ActualFolderSize, FileNo, FolderNo : Int64;
   CurClusterSize   : Integer;
   fDirThreadActive : Boolean;
   fKillDirThread   : Boolean;
@@ -17,17 +17,17 @@ var
   IDDirThread      : LongWord;
   hDirTreeOwner    : HWND;
   curDir           : string;
-  Tick             : Integer;
+  Tick             : Cardinal;
 
 function DirThreadMain(Ignored : Pointer) : Integer;
 
-function GetActualSize(LogicalSize, ClusterSize : Integer) : Integer;
+function GetActualSize(LogicalSize : Int64; ClusterSize : Integer) : Int64;
 
 implementation
 
 uses SysUtils;
 
-function GetActualSize(LogicalSize, ClusterSize : Integer) : Integer;
+function GetActualSize(LogicalSize : Int64; ClusterSize : Integer) : Int64;
 const
   Vals : array[False..True] of Integer = (0, 1);
 begin
@@ -39,7 +39,7 @@ procedure DirThreadProcess(const Path : string);
 var
   SearchRec : TSearchRec;
   Status : Integer;
-  NewTick : Integer;
+  NewTick : Cardinal;
 begin
   NewTick := GetTickCount;
   if NewTick - Tick > 250 then

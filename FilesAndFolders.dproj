@@ -139,7 +139,7 @@
         <DCCReference Include="HellogrammingComponents\fieldslist.pas"/>
         <DCCReference Include="HellogrammingComponents\HelpAwareLabel.pas"/>
         <DCCReference Include="HellogrammingComponents\ShExDriveComboBox.pas"/>
-        <DCCReference Include="FileInfoUtils.pas"/>
+        <DCCReference Include="Utils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

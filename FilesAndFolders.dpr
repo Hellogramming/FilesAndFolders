@@ -18,7 +18,7 @@ uses
   fieldslist in 'HellogrammingComponents\fieldslist.pas',
   HelpAwareLabel in 'HellogrammingComponents\HelpAwareLabel.pas',
   ShExDriveComboBox in 'HellogrammingComponents\ShExDriveComboBox.pas',
-  FileInfoUtils in 'FileInfoUtils.pas';
+  Utils in 'Utils.pas';
 
 {$R *.res}
 
